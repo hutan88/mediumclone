@@ -1,7 +1,7 @@
-import { ConnectionOptions } from "typeorm";
+import { ConnectionOptions, DataSourceOptions } from "typeorm";
 import { TagEntity } from "./tag/tag.entity";
 
-const config:ConnectionOptions={
+const config:DataSourceOptions={
     type: 'postgres',
     host: '192.168.245.170',
     port: 6543,
@@ -9,6 +9,6 @@ const config:ConnectionOptions={
     password: 'postgres',
     database: 'mediumclone', 
     entities: [TagEntity],
-    synchronize: true,
+    synchronize: false,
 }
 export default config;
