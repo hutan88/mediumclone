@@ -1,12 +1,12 @@
 import { HttpException, HttpStatus, Injectable } from "@nestjs/common";
-import { CreateUserDto } from "src/dto/createUser.dto";
+import { CreateUserDto } from "src/user/dto/createUser.dto";
 import { UserEntity } from "./user.entity";
 import { InjectRepository } from "@nestjs/typeorm";
 import { Repository } from "typeorm";
 import {sign} from 'jsonwebtoken';
 import { JWT_SECRET } from "src/config";
 import { UserResponseInterface } from "./types/userResponse.interface";
-import { LoginUserDto } from "src/dto/loginUser.dto";
+import { LoginUserDto } from "src/user/dto/loginUser.dto";
 import { compare} from "bcrypt";
 
 
